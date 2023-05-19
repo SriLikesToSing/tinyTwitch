@@ -1,0 +1,23 @@
+<html>
+
+
+<!-- CSS  -->
+ <link href="https://vjs.zencdn.n">
+
+
+ <!-- HTML -->
+ <video id='hls-example'  class="vijs-default-skin" width="400" height="300" controls>
+	 <source "application/x-mpegURL" src="../hls/stream.m3u8">
+ </video>
+
+
+ <script src="https://vjs.zencdn/ie8-ver.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
+ <script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+
+ <script>
+	 var player = videojs('hls-example');
+	 player.play();
+ </script>
+
+</html>
