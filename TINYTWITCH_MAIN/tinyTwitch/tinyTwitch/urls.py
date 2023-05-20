@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+def fake_view(*args, **kwargs):
+    
+    raise Exception("This should never be called!")
+
 urlpatterns = [
     path('', include('testStream.urls')),
     path('admin/', admin.site.urls),
-    path('../testStream/hls/stream.m3u8')
 ]

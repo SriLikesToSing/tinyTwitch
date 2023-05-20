@@ -10,7 +10,7 @@ def testStream(request):
     #template = loader.get_template(settings.TEMPLATES[0]['DIRS'][0])
     template = loader.get_template('testStream.html')
     template3 = loader.get_template('testStream2.html')
-    #streamFile = os.path.join(settings.STREAM_DIR, 'stream.m3u8')
+    streamFile = os.path.join(settings.STREAM_DIR, 'stream.m3u8')
     streamFile = os.path.join(settings.STREAM_DIR, 'index.html')
     #streamFileOutput = os.path.join(settings.STREAMFILE_DIR, 'stream.m3u8')
     #streamFileOutput = os.path.join(settings.STREAMFILE_DIR, 'stream.m3u8')
@@ -21,6 +21,6 @@ def testStream(request):
             'streamFileOutput' : 'poopy',
             }
 
-    return HttpResponse(template3.render())
+    return HttpResponse(template.render())
 
 
