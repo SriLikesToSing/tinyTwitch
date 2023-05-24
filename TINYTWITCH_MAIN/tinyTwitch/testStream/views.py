@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from django.conf import settings
+from django.template.response import TemplateResponse
 import os, os.path
 
 # Create your views here.
@@ -21,6 +22,8 @@ def testStream(request):
             'streamFileOutput' : 'poopy',
             }
 
-    return HttpResponse(template.render())
+#    return HttpResponse(template.render())
+
+    return TemplateResponse(request, 'testStream.html', {})
 
 

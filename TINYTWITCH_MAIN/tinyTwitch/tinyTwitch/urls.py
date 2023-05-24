@@ -24,5 +24,5 @@ def fake_view(*args, **kwargs):
 urlpatterns = [
     path('', include('testStream.urls')),
     path('admin/', admin.site.urls),
-    path('', include('testChat.urls'))
+    path('', include('chat.urls'))
 ]
